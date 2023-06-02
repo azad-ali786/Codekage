@@ -1,6 +1,26 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+// next.config.js
 
-module.exports = nextConfig
+module.exports = {
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'style-loader',
+        },
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+            importLoaders: 1,
+            modules: false,
+          },
+        },
+      ],
+    });
+
+    return config;
+  },
+};
+
