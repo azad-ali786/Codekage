@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8000"; // Update with your backend API base URL
+const API_BASE_URL = process.env.API_BASE_URL;
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -31,8 +31,8 @@ export const saveCode = async (
 
 export const runCode = async (code: string) => {
   try {
-    const response = await axios.post("/api/runCOde", { code });
-    return response.data.output;
+    const response = await api.post("/runCode", { code: code });
+    return response.data;
   } catch (error) {
     throw new Error("Code execution failed.");
   }

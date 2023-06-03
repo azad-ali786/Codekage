@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background-color: #f44336;
+}
+.banner-text {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
