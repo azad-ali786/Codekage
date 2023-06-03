@@ -33,32 +33,6 @@ The frontend code is organized into the following directories and files:
 
 - **...**: Other configuration files and files specific to the frontend setup.
 
-## Code Structure Visual
-
-CodeKage frontend
-├── components
-│   ├── CodeEditor
-│   │   ├── index.tsx
-│   │   └── CodeEditor.css
-│   ├── Terminal
-│   │   ├── index.tsx
-│   │   └── Terminal.css
-│   └── ...
-├── pages
-│   ├── index.tsx
-│   └── ...
-├── styles
-│   ├── globals.css
-│   └── ...
-├── utils
-│   ├── api.ts
-│
-├── next.config.js
-├── package.json
-├── tsconfig.json
-└── ...
-
-
 ## Technologies Used
 
 The frontend of the CodeKage application is built using the following technologies:
