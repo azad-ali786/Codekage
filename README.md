@@ -1,38 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CodeKage Frontend
 
-## Getting Started
+This is the frontend repository for the CodeKage application. It is built using React.js and Next.js to provide a dynamic and interactive user interface for coding.
 
-First, run the development server:
+## Code Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The frontend code is organized into the following directories and files:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **components**: Contains reusable React components used throughout the application.
+  - **CodeEditor**: Contains the code for the CodeEditor component, which provides a code editor interface for users to write and save code snippets.
+    - **index.tsx**: The main file of the CodeEditor component that contains the React component logic.
+    - **CodeEditor.css**: The CSS file for styling the CodeEditor component.
+  - **Terminal**: Contains the code for the Terminal component, which displays the output of the executed code.
+    - **index.tsx**: The main file of the Terminal component that contains the React component logic.
+    - **Terminal.css**: The CSS file for styling the Terminal component.
+  - **...**: Contains other reusable components used throughout the application.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **pages**: Contains Next.js pages that define the routes and components for each page.
+  - **index.tsx**: The main file for the landing page of the CodeKage application.
+  - **...**: Contains other page files for different routes in the application.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- **styles**: Contains global styles and CSS files for styling the application.
+  - **globals.css**: The main CSS file that defines global styles for the application.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **utils**: Contains utility functions and API functions for making HTTP requests to the backend.
+  - **api.ts**: Contains functions for making API requests to the backend server.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **next.config.js**: The Next.js configuration file.
 
-## Learn More
+- **package.json**: The package.json file that contains the project's dependencies and scripts.
 
-To learn more about Next.js, take a look at the following resources:
+- **tsconfig.json**: The TypeScript configuration file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **...**: Other configuration files and files specific to the frontend setup.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Code Structure Visual
 
-## Deploy on Vercel
+CodeKage frontend
+├── components
+│   ├── CodeEditor
+│   │   ├── index.tsx
+│   │   └── CodeEditor.css
+│   ├── Terminal
+│   │   ├── index.tsx
+│   │   └── Terminal.css
+│   └── ...
+├── pages
+│   ├── index.tsx
+│   └── ...
+├── styles
+│   ├── globals.css
+│   └── ...
+├── utils
+│   ├── api.ts
+│
+├── next.config.js
+├── package.json
+├── tsconfig.json
+└── ...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies Used
+
+The frontend of the CodeKage application is built using the following technologies:
+
+- **React.js**: A popular JavaScript library for building user interfaces.
+- **Next.js**: A React framework for server-side rendering, static site generation, and building web applications.
+- **Monaco Editor**: A feature-rich code editor component for the web.
+- **Xterm.js**: A terminal emulator library for the web, used for displaying the output of executed code.
+
+These technologies were chosen for their flexibility, performance, and developer-friendly features, enabling us to create a robust and efficient frontend for the CodeKage application.
+
+
+## Contributing
+
+Contributions to the CodeKage frontend are welcome! If you find any issues or would like to add new features, please follow these steps:
+
+1. Fork the repository and create a new branch for your feature or bug fix.
