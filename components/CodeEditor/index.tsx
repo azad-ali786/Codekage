@@ -3,7 +3,8 @@ import dynamic from "next/dynamic";
 import _debounce from "lodash/debounce";
 
 import Terminal from "../Terminal";
-import "./CodeEditor.css";
+import styles from "./CodeEditor.module.css"; // Import CSS module
+
 import { saveCode } from "@/utils/api";
 
 interface CodeEditorProps {
@@ -16,7 +17,13 @@ interface CodeEditorProps {
 
 const MonacoEditor = dynamic(import("react-monaco-editor"), { ssr: false });
 
-const CodeEditor: React.FC<CodeEditorProps> = ({ fileName, setFileName, userId, code, setCode }) => {
+const CodeEditor: React.FC<CodeEditorProps> = ({
+  fileName,
+  setFileName,
+  userId,
+  code,
+  setCode,
+}) => {
   const [buttonClicked, setButtonClicked] = useState(0);
 
   const handleSaveCode = async () => {
@@ -48,9 +55,9 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ fileName, setFileName, userId, 
 
   return (
     <div className="flex flex-col h-full w-full">
-      <div className="container">
-        <div className="input-container">
-          <label className="label" htmlFor="fileNameInput">
+      <div className={styles.container}>
+        <div className={styles.inputContainer}>
+          <label className={styles.label} htmlFor="fileNameInput">
             File Name:
           </label>
           <input
@@ -58,14 +65,14 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ fileName, setFileName, userId, 
             type="text"
             value={fileName}
             onChange={(e) => setFileName(e.target.value)}
-            className="input"
+            className={styles.input}
           />
         </div>
         <div>
-          <button onClick={handleSaveCode} className="button">
+          <button onClick={handleSaveCode} className={styles.button}>
             Save
           </button>
-          <button onClick={handleButtonClicked} className="button">
+          <button onClick={handleButtonClicked} className={styles.button}>
             Run
           </button>
         </div>

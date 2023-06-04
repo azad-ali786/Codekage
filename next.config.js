@@ -17,7 +17,7 @@ module.exports = {
           options: {
             sourceMap: true,
             importLoaders: 1,
-            modules: false,
+            modules: true, // Enable CSS modules
           },
         },
       ],
@@ -25,6 +25,6 @@ module.exports = {
 
     return config;
   },
-  swcMinify: true,
 };
+
 

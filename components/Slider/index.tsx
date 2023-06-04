@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import "./Slider.css"; // Import the CSS file
+import styles from "./Slider.module.css"; // Import CSS module
 
-const Slider: React.FC<{ fileName: string; setFileName: (fileName: string) => void }> = ({ fileName,
-  setFileName,
-}) => {
+const Slider: React.FC<{
+  fileName: string;
+  setFileName: (fileName: string) => void;
+}> = ({ fileName, setFileName }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -17,8 +18,12 @@ const Slider: React.FC<{ fileName: string; setFileName: (fileName: string) => vo
   };
 
   return (
-    <div className={`main-slider ${submitted || fileName? "move-out" : ""}`}>
-      <div className="slider-content">
+    <div
+      className={`${styles.mainSlider}` + `${
+        submitted || fileName ? styles.moveOut : ""
+      }`}
+    >
+      <div className={styles.sliderContent}>
         <div>
           <Image
             src="/LogoCodeKage.svg"
@@ -26,7 +31,7 @@ const Slider: React.FC<{ fileName: string; setFileName: (fileName: string) => vo
             width={300}
             height={100}
           />
-          <form onSubmit={handleSubmit} className="slider-form">
+          <form onSubmit={handleSubmit} className={styles.sliderForm}>
             <input
               type="text"
               placeholder="Enter your Filename"
