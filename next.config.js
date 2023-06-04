@@ -3,7 +3,7 @@
 
 module.exports = {
   env: {
-    API_BASE_URL: "http://localhost:8000", // Update with your backend API base URL
+    API_BASE_URL: "https://code-kage-backend.vercel.app/", // Update with your backend API base URL
   },
   webpack: (config) => {
     config.module.rules.push({
