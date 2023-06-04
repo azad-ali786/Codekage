@@ -4,7 +4,7 @@ import styles from "./NavBar.module.css"; // Import CSS module
 
 const NavBar = () => {
   return (
-    <nav className={styles.nav}>
+    <div className={styles.navBar}>
       <Image
         src="/LogoCodeKage.svg"
         alt="CodeKage Logo"
@@ -12,11 +12,9 @@ const NavBar = () => {
         height={50}
       />
       <div className={styles.banner}>
-        <h1 className={styles.bannerText}>
-          Only supports JavaScript for now
-        </h1>
+        <h1 className={styles.bannerText}>Only supports JavaScript for now</h1>
       </div>
-    </nav>
+    </div>
   );
 };
 

@@ -1,25 +1,22 @@
+// next.config.js
 module.exports = {
   env: {
     API_BASE_URL: "https://code-kage-backend.vercel.app/", // Update with your backend API base URL
   },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: [
-        {
-          loader: "style-loader",
-        },
-        {
-          loader: "css-loader",
-          options: {
-            sourceMap: true,
-            importLoaders: 1,
-            modules: true, // Enable CSS modules
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.module.rules.push({
+        test: /\.css$/,
+        use: [
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
           },
-        },
-      ],
-    });
-
+        ],
+      });
+    }
     return config;
   },
 };
