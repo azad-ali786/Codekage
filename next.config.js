@@ -1,4 +1,4 @@
-// next.config.js
+
 module.exports = {
   env: {
     API_BASE_URL: "https://code-kage-backend.vercel.app/", // Update with your backend API base URL
@@ -7,16 +7,11 @@ module.exports = {
     if (!isServer) {
       config.module.rules.push({
         test: /\.css$/,
-        use: [
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-            },
-          },
-        ],
+        exclude: /node_modules\/monaco-editor/,
+        use: ["style-loader", "css-loader"],
       });
     }
+
     return config;
   },
 };
