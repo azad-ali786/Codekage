@@ -4,7 +4,7 @@
   left:0;
   width: 100vw;
   height: 100vh;
-  background-color: #e5e4e4;
+  background-color: black;
   transition: all 1s ease-in;
   z-index: 1000;
 }
