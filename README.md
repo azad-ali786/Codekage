@@ -9,10 +9,10 @@ The frontend code is organized into the following directories and files:
 - **components**: Contains reusable React components used throughout the application.
   - **CodeEditor**: Contains the code for the CodeEditor component, which provides a code editor interface for users to write and save code snippets.
     - **index.tsx**: The main file of the CodeEditor component that contains the React component logic.
-    - **CodeEditor.css**: The CSS file for styling the CodeEditor component.
+    - **CodeEditor.module.css**: The CSS file for styling the CodeEditor component.
   - **Terminal**: Contains the code for the Terminal component, which displays the output of the executed code.
     - **index.tsx**: The main file of the Terminal component that contains the React component logic.
-    - **Terminal.css**: The CSS file for styling the Terminal component.
+    - **Terminal.module.css**: The CSS file for styling the Terminal component.
   - **...**: Contains other reusable components used throughout the application.
 
 - **pages**: Contains Next.js pages that define the routes and components for each page.

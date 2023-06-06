@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from "./Slider.module.css"; // Import CSS module
+
+import styles from "./Slider.module.css";
 
 const Slider: React.FC<{
   fileName: string;
@@ -19,7 +20,7 @@ const Slider: React.FC<{
 
   return (
     <div
-      className={`${styles.mainSlider}` + `${
+      className={`${styles.mainSlider} ${
         submitted || fileName ? styles.moveOut : ""
       }`}
     >
